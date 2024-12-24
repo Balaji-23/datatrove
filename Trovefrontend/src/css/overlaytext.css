@@ -1,0 +1,59 @@
+.card {
+    position: relative;
+    overflow: hidden;
+    border: none; /* Remove any border for a cleaner look */
+  }
+  
+  .card-img {
+    width: 100%;
+    height: 100%; /* Ensure the image fully covers the card area */
+    object-fit: cover; /* Keeps the aspect ratio of the image */
+    opacity: 0.5; /* Adjust the image opacity to let the text stand out more */
+    
+  }
+  
+  .card-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Darker overlay for better readability */
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px; /* Rounded corners for the overlay */
+  }
+  
+  .card-text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 15px; /* Increase space between title and description */
+    line-height: 1.4;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+    max-width: 80%; /* Limit the width of the description */
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 768px) {
+    .card-img-overlay {
+      padding: 15px; /* Reduce padding for smaller screens */
+    }
+  
+    .card-text {
+      font-size: 1.4rem; /* Slightly smaller title text */
+    }
+  
+    h3 {
+      font-size: 1rem; /* Smaller font size for the description */
+    }
+  }
+  

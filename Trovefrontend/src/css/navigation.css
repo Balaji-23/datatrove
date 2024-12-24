@@ -1,0 +1,35 @@
+@media (max-width: 576px) {
+    .navbar .h1 img {
+      height: 50px; /* Smaller logo for mobile */
+    }
+  
+    .navbar .btn {
+      font-size: 0.8rem; /* Smaller button for mobile */
+      padding: 8px 15px;
+    }
+  }
+  
+  /* Tablet view (min width: 577px and max width: 768px) */
+  @media (min-width: 577px) and (max-width: 768px) {
+    .navbar .h1 img {
+      height: 70px; /* Adjusted logo size */
+    }
+  
+    .navbar .btn {
+      font-size: 0.9rem;
+      padding: 9px 18px;
+    }
+  }
+  
+  /* Desktop view (min width: 769px) */
+  @media (min-width: 769px) {
+    .navbar .h1 img {
+      height: 90px; /* Default size for larger screens */
+      
+    }
+  
+    .navbar .btn {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
