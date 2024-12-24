@@ -1,0 +1,37 @@
+version: '3:8'
+
+networks:
+  app-network:
+    driver: bridge
+
+services:
+  backend: 
+    image: balaji236/troveapp-backend:latest
+    build:
+      context: /Trovebackend
+      dockerfile: Dockerfile
+    ports: 
+      - 5000:5000
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+    networks:
+      - app-network
+    restart: always
+
+  frontend:
+      image: balaji236/troveapp-frontend:latest 
+      build:
+        context: /Trovefrontend
+        dockerfile: Dockerfile
+      ports:
+        - 8080:80
+      environment:
+        NODE_ENV: production
+        REACT_APP_BACKEND_URL: https://trovebackend-591260349154.us-central1.run.app
+      depends_on:
+        - backend
+      networks:
+        - app-network
+      restart: always
+      
